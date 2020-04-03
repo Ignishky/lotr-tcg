@@ -1,0 +1,22 @@
+<project xmlns="http://maven.apache.org/DECORATION/1.6.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/DECORATION/1.6.0 http://maven.apache.org/xsd/decoration-1.6.0.xsd">
+    <body>
+        <menu name="Modules">
+            <item name="Build tools" href="build-tools/build-tools/summary.html" />
+            <item name="Server" href="server/server/summary.html" />
+            <item name="VueJs" href="vuejs/vuejs/summary.html" />
+        </menu>
+        <menu name="Overview">
+            <item name="Summary" href="summary.html" />
+            <item name="Licences" href="licenses.html" />
+            <item name="Team" href="team.html" />
+            <item name="Source Repository" href="scm.html" />
+            <item name="Issue Management" href="issue-management.html" />
+        </menu>
+        <menu name="Reports">
+            <item name="Dependency updates" href="dependency-updates-report.html" />
+            <item name="Dependency convergence" href="dependency-convergence.html" />
+            <item name="Plugin updates" href="plugin-updates-report.html" />
+        </menu>
+    </body>
+</project>

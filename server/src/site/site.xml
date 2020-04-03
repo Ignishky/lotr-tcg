@@ -1,0 +1,25 @@
+<project xmlns="http://maven.apache.org/DECORATION/1.6.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/DECORATION/1.6.0 http://maven.apache.org/xsd/decoration-1.6.0.xsd">
+    <body>
+        <menu name="Parent">
+            <item name="Lotr-TCG" href="../../summary.html" />
+        </menu>
+        <menu name="Overview">
+            <item name="Summary" href="summary.html" />
+            <item name="Licences" href="licenses.html" />
+            <item name="Team" href="team.html" />
+            <item name="Source Repository" href="scm.html" />
+            <item name="Issue Management" href="issue-management.html" />
+            <item name="Dependencies" href="dependencies.html" />
+            <item name="Plugins" href="plugins.html" />
+        </menu>
+        <menu name="Reports">
+            <item name="Dependency updates" href="dependency-updates-report.html" />
+            <item name="Dependency analysis" href="dependency-analysis.html" />
+            <item name="Plugin updates" href="plugin-updates-report.html" />
+            <item name="Checkstyle" href="checkstyle.html" />
+            <item name="Surefire" href="surefire-report.html" />
+            <item name="Jacoco" href="jacoco/index.html" />
+        </menu>
+    </body>
+</project>
