@@ -1,0 +1,8 @@
+language: java
+
+jdk:
+  - openjdk11
+
+after_success:
+  - mvn clean site site:stage -PReporting
+  - mvn scm-publish:publish-scm
