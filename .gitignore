@@ -23,8 +23,17 @@
 hs_err_pid*
 
 target
+dist
+node
+node_modules
+coverage
 
-# IntellIJ Idea
+# IDE
+.classpath
+.factorypath
+.project
+.settings
+.vscode
 *.iml
 .idea
 .DS_STORE

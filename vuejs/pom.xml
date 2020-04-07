@@ -17,4 +17,87 @@
     <properties>
         <build-tools.basedir>${project.basedir}/../build-tools</build-tools.basedir>
     </properties>
+
+    <build>
+		<plugins>
+			<plugin>
+				<groupId>com.github.eirslett</groupId>
+				<artifactId>frontend-maven-plugin</artifactId>
+				<version>1.9.1</version>
+				<configuration>
+					<workingDirectory>./</workingDirectory>
+				</configuration>
+				<executions>
+					<execution>
+						<id>install node and npm</id>
+						<goals>
+							<goal>install-node-and-npm</goal>
+						</goals>
+						<configuration>
+							<nodeVersion>v10.15.3</nodeVersion>
+						</configuration>
+					</execution>
+					<execution>
+						<id>npm install</id>
+						<goals>
+							<goal>npm</goal>
+						</goals>
+					</execution>
+					<execution>
+						<id>npm run subpath</id>
+						<goals>
+							<goal>npm</goal>
+						</goals>
+						<configuration>
+							<arguments>run subpath</arguments>
+						</configuration>
+					</execution>
+					<execution>
+						<id>npm run test</id>
+						<goals>
+							<goal>npm</goal>
+						</goals>
+						<phase>test</phase>
+						<configuration>
+							<arguments>run test</arguments>
+						</configuration>
+					</execution>
+				</executions>
+			</plugin>
+		</plugins>
+	</build>
+	
+	<profiles>
+		<profile>
+			<id>Reporting</id>
+            <activation>
+                <activeByDefault>false</activeByDefault>
+            </activation>
+            <build>
+                <plugins>
+                    <plugin>
+						<artifactId>maven-resources-plugin</artifactId>
+						<executions>
+							<execution>
+								<id>Copy jest coverage report</id>
+								<phase>site</phase>
+								<goals>
+									<goal>copy-resources</goal>
+								</goals>
+								<configuration>
+									<outputDirectory>${project.build.directory}/site/coverage</outputDirectory>
+									<resources>
+										<resource>
+											<directory>${basedir}/coverage/lcov-report</directory>
+											<filtering>true</filtering>
+										</resource>
+									</resources>
+								</configuration>
+							</execution>
+					   </executions>
+					</plugin>
+                </plugins>
+            </build>
+		</profile>
+	</profiles>
 </project>

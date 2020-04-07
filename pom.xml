@@ -19,6 +19,10 @@
     <developers>
         <developer>
             <name>Ignishky</name>
+            <roles>
+                <role>Developer</role>
+                <role>Designer</role>
+            </roles>
         </developer>
     </developers>
 
@@ -33,7 +37,7 @@
         <url>https://github.com/Ignishky/lotr-tcg</url>
     </scm>
 
-    <url>https://github.com/Ignishky/lotr-tcg</url>
+    <url>https://ignishky.github.io/lotr-tcg/summary.html</url>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -55,16 +59,6 @@
             <url>${project.baseUri}</url>
         </site>
     </distributionManagement>
-
-    <dependencyManagement>
-        <dependencies>
-            <dependency>
-                <groupId>${project.groupId}</groupId>
-                <artifactId>core</artifactId>
-                <version>${project.version}</version>
-            </dependency>
-        </dependencies>
-    </dependencyManagement>
 
     <build>
         <pluginManagement>
@@ -126,7 +120,6 @@
                 <configuration>
                     <checkoutDirectory>${project.build.directory}/scmpublish</checkoutDirectory>
                     <checkinComment>Publishing Site Docs for ${project.artifactId}:${project.version}</checkinComment>
-                    <!-- Plugins defaults to "target/staging" and since the distributionManagement section is a pain in the ass for site docs, this is easier -->
                     <skipDeletedFiles>true</skipDeletedFiles>
                     <pubScmUrl>scm:git:ssh://git@github.com/Ignishky/lotr-tcg.git</pubScmUrl>
                     <scmBranch>gh-pages</scmBranch>
@@ -224,29 +217,4 @@
             </plugin>
         </plugins>
     </reporting>
-
-    <profiles>
-        <profile>
-            <id>Reporting</id>
-            <activation>
-                <activeByDefault>false</activeByDefault>
-            </activation>
-            <build>
-                <plugins>
-                    <plugin>
-                        <groupId>org.jacoco</groupId>
-                        <artifactId>jacoco-maven-plugin</artifactId>
-                        <executions>
-                            <execution>
-                                <id>agent</id>
-                                <goals>
-                                    <goal>prepare-agent</goal>
-                                </goals>
-                            </execution>
-                        </executions>
-                    </plugin>
-                </plugins>
-            </build>
-        </profile>
-    </profiles>
 </project>
