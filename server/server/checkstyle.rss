@@ -20,19 +20,19 @@ under the License.
 <rss version="0.91">
   <channel>
     <title>Server - Checkstyle report</title>
-    <link>https://github.com/Ignishky/lotr-tcg/server</link>
+    <link>https://ignishky.github.io/lotr-tcg/summary.html/server</link>
     <description>Server - Checkstyle report</description>
     <language>en-us</language>
     <copyright>&#169;2020</copyright>
     <item>
-      <title>File: 3,
+      <title>File: 4,
              Errors: 0,
              Warnings: 0,
              Infos: 0
       </title>
-            <link>https://github.com/Ignishky/lotr-tcg/server/checkstyle.html</link>
+            <link>https://ignishky.github.io/lotr-tcg/summary.html/server/checkstyle.html</link>
       <description>
-        <p>Click <a href="https://github.com/Ignishky/lotr-tcg/server/checkstyle.html">here</a> for the full Checkstyle report.</p>
+        <p>Click <a href="https://ignishky.github.io/lotr-tcg/summary.html/server/checkstyle.html">here</a> for the full Checkstyle report.</p>
 
         <table summary="Files" boder="1">
           <thead>
@@ -46,7 +46,7 @@ under the License.
           <tbody>
                           <tr>
                 <td>
-                  <a href="https://github.com/Ignishky/lotr-tcg/server/checkstyle.html#fr.ignishky.lotrtcg.LotrTcgApplication.java">fr/ignishky/lotrtcg/LotrTcgApplication.java</a>
+                  <a href="https://ignishky.github.io/lotr-tcg/summary.html/server/checkstyle.html#fr.ignishky.lotrtcg.LotrTcgApplication.java">fr/ignishky/lotrtcg/LotrTcgApplication.java</a>
                 </td>
                 <td>
                   0
@@ -60,7 +60,7 @@ under the License.
               </tr>
                           <tr>
                 <td>
-                  <a href="https://github.com/Ignishky/lotr-tcg/server/checkstyle.html#fr.ignishky.lotrtcg.controller.CardController.java">fr/ignishky/lotrtcg/controller/CardController.java</a>
+                  <a href="https://ignishky.github.io/lotr-tcg/summary.html/server/checkstyle.html#application.properties">application.properties</a>
                 </td>
                 <td>
                   0
@@ -74,7 +74,21 @@ under the License.
               </tr>
                           <tr>
                 <td>
-                  <a href="https://github.com/Ignishky/lotr-tcg/server/checkstyle.html#fr.ignishky.lotrtcg.controller.model.Card.java">fr/ignishky/lotrtcg/controller/model/Card.java</a>
+                  <a href="https://ignishky.github.io/lotr-tcg/summary.html/server/checkstyle.html#fr.ignishky.lotrtcg.controller.CardController.java">fr/ignishky/lotrtcg/controller/CardController.java</a>
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+                <td>
+                  0
+                </td>
+              </tr>
+                          <tr>
+                <td>
+                  <a href="https://ignishky.github.io/lotr-tcg/summary.html/server/checkstyle.html#fr.ignishky.lotrtcg.controller.model.Card.java">fr/ignishky/lotrtcg/controller/model/Card.java</a>
                 </td>
                 <td>
                   0
