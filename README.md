@@ -17,6 +17,14 @@ mvn clean install
 java -jar ./server/target/server-X.X.jar
 ```
 
+http://localhost:9090
+
+### Vuejs
+
+```shell script
+npm run serve
+```
+
 http://localhost:8080
 
 ## Site

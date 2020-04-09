@@ -11,8 +11,9 @@ public class Card {
 
     String id;
     String name;
+    String cardNumber;
 
     public Card() {
-        this(null, null);
+        this(null, null, null);
     }
 }

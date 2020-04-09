@@ -21,7 +21,7 @@ class CardControllerTest {
 
     @Test
     void should_get_card_by_id() throws Exception {
-        mvc.perform(get("/cards/1"))
+        mvc.perform(get("/api/cards/1"))
                 .andExpect(status().is(SC_OK))
                 .andExpect(content().contentType(APPLICATION_JSON))
                 .andExpect(content().json("{\"id\":\"1\", \"name\":\"Frodo\"}"));
