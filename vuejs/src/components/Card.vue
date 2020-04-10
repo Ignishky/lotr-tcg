@@ -1,5 +1,5 @@
 <template>
-  <img :alt="this.cardNumber" :src="this.image" />
+  <img :alt="this.number" :src="this.image" />
 </template>
 
 <script>
@@ -16,7 +16,7 @@ export default {
   data() {
     return {
       name: null,
-      cardNumber: null,
+      number: null,
       image: null
     };
   },
@@ -26,12 +26,12 @@ export default {
       .getCard(this.id)
       .then(response => {
         this.name = response.data.name;
-        this.cardNumber = response.data.cardNumber;
-        this.image = images.getImage(this.cardNumber);
+        this.number = response.data.number;
+        this.image = images.getImage(this.number);
       })
       .catch(() => {
         this.name = null;
-        this.cardNumber = null;
+        this.number = null;
         this.image = null;
       });
   }

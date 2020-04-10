@@ -14,7 +14,7 @@ describe('Card.vue', () => {
 
     expect(wrapper.props().id).toBe(cardId)
     wrapper.vm.$nextTick(() => {
-      expect(wrapper.vm.cardNumber).toBe("01364")
+      expect(wrapper.vm.number).toBe("01364")
       expect(wrapper.vm.image).toBe("assets/lotr01001.jpg")
     })
   })
@@ -27,7 +27,7 @@ describe('Card.vue', () => {
 
     expect(wrapper.props().id).toBe(cardId)
     wrapper.vm.$nextTick(() => {
-      expect(wrapper.vm.cardNumber).toBe(null)
+      expect(wrapper.vm.number).toBe(null)
       expect(wrapper.vm.image).toBe(null)
     })
   })

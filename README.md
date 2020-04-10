@@ -13,6 +13,12 @@ mvn clean install
 
 ### Server
 
+#### Swagger
+
+http://localhost:9090/swagger-ui.html
+
+#### Run
+
 ```shell script
 java -jar ./server/target/server-X.X.jar
 ```
