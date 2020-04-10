@@ -14,16 +14,16 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 
 @SpringBootTest
 @AutoConfigureMockMvc
-class CardControllerTest {
+class DefaultCardControllerTest {
 
     @Autowired
     private MockMvc mvc;
 
     @Test
-    void should_get_card_by_id() throws Exception {
+    void should_get_card_by_number() throws Exception {
         mvc.perform(get("/api/cards/1"))
                 .andExpect(status().is(SC_OK))
                 .andExpect(content().contentType(APPLICATION_JSON))
-                .andExpect(content().json("{\"id\":\"1\", \"name\":\"Frodo\"}"));
+                .andExpect(content().json("{'name':'Frodo', 'number':'1'}", true));
     }
 }
