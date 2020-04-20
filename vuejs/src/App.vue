@@ -1,6 +1,8 @@
 <template>
   <div id="app">
     <card id="01001"/>
+    <card id="01290"/>
+    <card id="01364"/>
   </div>
 </template>
 

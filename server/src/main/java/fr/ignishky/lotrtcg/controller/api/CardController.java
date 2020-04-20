@@ -16,5 +16,7 @@ public interface CardController {
 
     @GetMapping("/{number}")
     @ApiOperation("Get card with given number")
-    Card getCard(@ApiParam(required = true, value = "The serial number of the card", example = "01364") @PathVariable("number") String number);
+    Card getCard(
+            @ApiParam(required = true, value = "The serial number of the card", example = "01364")
+            @PathVariable("number") String number);
 }
