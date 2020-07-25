@@ -1,6 +1,6 @@
-import lotr01001 from "@/assets/cards/lotr01001.jpg";
-import lotr01290 from "@/assets/cards/lotr01290.jpg";
-import lotr01364 from "@/assets/cards/lotr01364.jpg";
+import lotr01001 from '@/assets/cards/lotr01001.jpg'
+import lotr01290 from '@/assets/cards/lotr01290.jpg'
+import lotr01364 from '@/assets/cards/lotr01364.jpg'
 
 const images = [];
 

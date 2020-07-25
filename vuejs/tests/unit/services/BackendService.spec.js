@@ -1,21 +1,21 @@
-import axios from 'axios';
-import BackendService from '@/services/BackendService'
+import axios from 'axios'
+import backendService from '@/services/BackendService'
 
-jest.mock('axios');
+jest.mock('axios')
 
-describe('BackendService.js', () => {
+describe('BackendService', () => {
 
-    it('Should return card from valid id', async () => {
-        const data = {
+    test('Should call API to return card from id', async () => {
+        const card = {
             data: {
                 name: 'cardName',
                 number: 'cardNumber'
             }
         };
         
-        axios.get.mockImplementationOnce(() => Promise.resolve(data));
+        axios.get.mockResolvedValue(card);
 
-        await expect(BackendService.getCard("toto")).resolves.toEqual(data)
+        await expect(backendService.getCard("toto")).resolves.toEqual(card)
         expect(axios.get).toHaveBeenCalledWith("/api/cards/toto");
     })
 })

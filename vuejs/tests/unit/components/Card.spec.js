@@ -1,34 +1,45 @@
 import { shallowMount } from '@vue/test-utils'
 import Card from '@/components/Card'
+import Backend from '@/services/BackendService'
+import ImageService from '@/services/ImageService'
+import lotr01364 from '@/assets/cards/lotr01364.jpg'
 
-jest.mock("@/services/BackendService");
-jest.mock("@/services/ImageService");
+jest.mock('@/services/BackendService')
+jest.mock('@/services/ImageService')
 
-describe('Card.vue', () => {
+describe('Card', () => {
 
-  it('Should find image for valid props id', () => {
-    const cardId = 'valid'
+  test('Should find image for valid props id', async () => {
+    const card = {
+      data: {
+        name: 'cardName',
+        number: '01364'
+      }
+    }
+
+    Backend.getCard.mockResolvedValue(card)
+    ImageService.getImage.mockReturnValue(lotr01364)
+
     const wrapper = shallowMount(Card, {
-      propsData: { id: cardId }
+      propsData: { id: 'valid' }
     })
 
-    expect(wrapper.props().id).toBe(cardId)
-    wrapper.vm.$nextTick(() => {
-      expect(wrapper.vm.number).toBe("01364")
-      expect(wrapper.vm.image).toBe("assets/lotr01001.jpg")
-    })
+    await wrapper.vm.$nextTick()
+    expect(wrapper.vm.number).toBe("01364")
+    expect(ImageService.getImage).toHaveBeenNthCalledWith(1, 'valid')
+    expect(wrapper.vm.image).toBe(lotr01364)
   })
 
-  it('Should return null with invalid props id', () => {
-    const cardId = 'invalid'
+  test('Should return null with invalid props id', async () => {
+    Backend.getCard.mockRejectedValue()
+    ImageService.getImage.mockClear()
+
     const wrapper = shallowMount(Card, {
-      propsData: { id: cardId }
+      propsData: { id: 'invalid' }
     })
 
-    expect(wrapper.props().id).toBe(cardId)
-    wrapper.vm.$nextTick(() => {
-      expect(wrapper.vm.number).toBe(null)
-      expect(wrapper.vm.image).toBe(null)
-    })
+    await wrapper.vm.$nextTick()
+    expect(wrapper.vm.image).toBe(null)
+    expect(ImageService.getImage).not.toHaveBeenCalled()
   })
 })

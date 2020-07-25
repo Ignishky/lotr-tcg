@@ -3,8 +3,8 @@
 </template>
 
 <script>
-import images from "@/services/ImageService";
-import backend from "@/services/BackendService";
+import images from '@/services/ImageService'
+import backend from '@/services/BackendService'
 
 export default {
   name: "Card",
@@ -25,15 +25,15 @@ export default {
     backend
       .getCard(this.id)
       .then(response => {
-        this.name = response.data.name;
-        this.number = response.data.number;
-        this.image = images.getImage(this.number);
+        this.name = response.data.name
+        this.number = response.data.number
+        this.image = images.getImage(this.id)
       })
       .catch(() => {
-        this.name = null;
-        this.number = null;
-        this.image = null;
-      });
+        this.name = null
+        this.number = null
+        this.image = null
+      })
   }
-};
+}
 </script>

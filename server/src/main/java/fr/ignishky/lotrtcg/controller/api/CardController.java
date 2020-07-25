@@ -10,12 +10,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import static org.springframework.util.MimeTypeUtils.APPLICATION_JSON_VALUE;
 
-@Api(tags = "Card controller documentation")
+@Api(tags = "API for Cards")
 @RequestMapping(value = "/api/cards", produces = APPLICATION_JSON_VALUE)
 public interface CardController {
 
     @GetMapping("/{number}")
-    @ApiOperation("Get card with given number")
+    @ApiOperation("Get card with the given number")
     Card getCard(
             @ApiParam(required = true, value = "The serial number of the card", example = "01364")
             @PathVariable("number") String number);
