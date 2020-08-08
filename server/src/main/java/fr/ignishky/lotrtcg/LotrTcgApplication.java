@@ -22,11 +22,14 @@ public class LotrTcgApplication  implements CommandLineRunner {
     @Override
     public void run(String... args) {
 
-        repository.deleteAll();
-
-        log.info("Save a couple of cards.");
-        repository.save(new ACard().withNumber("01001").withTitle("The One ring"));
-        repository.save(new ACard().withNumber("01290").withTitle("Frodo"));
-        repository.save(new ACard().withNumber("01364").withTitle("Gandalf"));
+        if (repository.findByNumber("01001") == null) {
+            repository.save(new ACard().withNumber("01001").withTitle("The One ring"));
+        }
+        if (repository.findByNumber("01290") == null) {
+            repository.save(new ACard().withNumber("01290").withTitle("Frodo"));
+        }
+        if (repository.findByNumber("01364") == null) {
+            repository.save(new ACard().withNumber("01364").withTitle("Gandalf"));
+        }
     }
 }

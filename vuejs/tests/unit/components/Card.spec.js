@@ -28,6 +28,7 @@ describe('Card', () => {
     expect(wrapper.vm.number).toBe("01364")
     expect(ImageService.getImage).toHaveBeenNthCalledWith(1, 'valid')
     expect(wrapper.vm.image).toBe(lotr01364)
+    expect(wrapper.vm.name).toBe("cardName")
   })
 
   test('Should return null with invalid props id', async () => {
@@ -41,5 +42,7 @@ describe('Card', () => {
     await wrapper.vm.$nextTick()
     expect(wrapper.vm.image).toBe(null)
     expect(ImageService.getImage).not.toHaveBeenCalled()
+    expect(wrapper.vm.image).toBe(null)
+    expect(wrapper.vm.name).toBe(null)
   })
 })

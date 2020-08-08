@@ -1,18 +1,18 @@
 <template>
   <div id="app">
-    <card id="01001"/>
-    <card id="01290"/>
-    <card id="01364"/>
+    <personage personageId="01290" equipmentId="01001"/>
+    <personage personageId="01364" />
   </div>
 </template>
 
 <script>
-import Card from '@/components/Card'
+import Personage from '@/components/Personage'
 
 export default {
   name: 'App',
+
   components: {
-    Card
+    Personage
   }
 }
 </script>
