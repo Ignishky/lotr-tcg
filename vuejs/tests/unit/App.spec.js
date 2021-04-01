@@ -5,7 +5,5 @@ describe('App', () => {
 
   test('Should find image for valid props id', () => {
     const wrapper = shallowMount(App)
-
-    expect(wrapper.isVueInstance()).toBeTruthy()
   })
 })

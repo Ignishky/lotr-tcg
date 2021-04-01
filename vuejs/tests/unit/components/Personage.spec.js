@@ -10,7 +10,6 @@ describe('Personage', () => {
             propsData: { personageId: 'persoId', equipmentId: 'equipId' }
         })
 
-        expect(wrapper.isVueInstance()).toBeTruthy()
         expect(wrapper.vm.personageId).toBe("persoId")
         expect(wrapper.vm.equipmentId).toBe("equipId")
         expect(wrapper.vm.hasEquipment).toBe(true)
