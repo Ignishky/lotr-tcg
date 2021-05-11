@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import static org.springframework.util.MimeTypeUtils.APPLICATION_JSON_VALUE;
 
-@Api(tags = "API for Cards")
+@Api(tags = "Card")
 @RequestMapping(value = "/api/cards", produces = APPLICATION_JSON_VALUE)
 public interface CardController {
 

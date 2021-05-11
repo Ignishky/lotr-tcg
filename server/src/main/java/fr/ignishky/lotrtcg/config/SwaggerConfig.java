@@ -1,5 +1,6 @@
 package fr.ignishky.lotrtcg.config;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import springfox.documentation.service.ApiInfo;
@@ -20,10 +21,17 @@ public class SwaggerConfig {
 
     private static final Contact CONTACT = new Contact("Ignishky", "https://github.com/Ignishky", "thierry.ducloyer@gmail.com");
 
+    @Value("${swagger.name}")
+    private String name;
+    @Value("${swagger.description}")
+    private String description;
+    @Value("${swagger.version}")
+    private String version;
+
     @Bean
     public Docket api() {
         return new Docket(SWAGGER_2)
-                .apiInfo(new ApiInfo("name", "description", "version", null, CONTACT, null, null, emptyList()))
+                .apiInfo(new ApiInfo(name, description, version, null, CONTACT, null, null, emptyList()))
                 .tags(new Tag("Card", "All the cards endpoints."))
                 .produces(Set.of(APPLICATION_JSON_VALUE))
                 .useDefaultResponseMessages(false)
